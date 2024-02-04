@@ -5,20 +5,20 @@ settings:
   daysInHistogram: 90 # number of days you want to display in histogram
   collectResponseTimes: true # collects avg response times from CRON locations
 
-  allmonitorsOperational: 'All Systems Operational'
+  allmonitorsOperational: '所有系统正常运行'
   notAllmonitorsOperational: 'Not All Systems Operational'
   monitorLabelOperational: 'Operational'
   monitorLabelNotOperational: 'Not Operational'
   monitorLabelNoData: 'No data'
   dayInHistogramNoData: 'No data'
-  dayInHistogramOperational: 'All good'
+  dayInHistogramOperational: '一切正常'
   dayInHistogramNotOperational: ' incident(s)' # xx incident(s) recorded
 
 
 monitors:
   - id: xcheny # unique identifier
     name: www.xcheny.cn
-    description: 'You write code. They handle the rest.' # default=empty
+    # description: 'You write code. They handle the rest.' # default=empty
     url: 'https://www.xcheny.cn/' # URL to fetch
     method: GET # default=GET
     expectStatus: 200 # operational status, default=200
@@ -27,7 +27,7 @@ monitors:
 
   - id: aile
     name: 艾了.top
-    description: 'Built for anything connected to the Internet.'
+    # description: 'Built for anything connected to the Internet.'
     url: 'https://www.xn--ykqv08j.top/'
     method: GET
     expectStatus: 200
@@ -42,7 +42,7 @@ monitors:
     
   - id: wanp
     name: wanp.tk
-    description: '666'
+    description: '网盘程序'
     url: 'https://wanp.tk/'
     method: GET
     expectStatus: 200
