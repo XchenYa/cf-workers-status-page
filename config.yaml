@@ -6,28 +6,29 @@ settings:
   collectResponseTimes: true # collects avg response times from CRON locations
 
   allmonitorsOperational: '所有系统正常运行'
-  notAllmonitorsOperational: 'Not All Systems Operational'
-  monitorLabelOperational: 'Operational'
-  monitorLabelNotOperational: 'Not Operational'
-  monitorLabelNoData: 'No data'
-  dayInHistogramNoData: 'No data'
+  notAllmonitorsOperational: '部分系统未正常运行'
+  monitorLabelOperational: '正常'
+  monitorLabelNotOperational: '不正常'
+  monitorLabelNoData: '无数据'
+  dayInHistogramNoData: '无数据'
   dayInHistogramOperational: '一切正常'
-  dayInHistogramNotOperational: ' incident(s)' # xx incident(s) recorded
+  dayInHistogramNotOperational: ' 个故障记录'  # xx 个故障记录
+
 
 
 monitors:
   - id: xcheny # unique identifier
     name: www.xcheny.cn
-    # description: 'You write code. They handle the rest.' # default=empty
+    description: '个人主页' # default=empty
     url: 'https://www.xcheny.cn/' # URL to fetch
     method: GET # default=GET
     expectStatus: 200 # operational status, default=200
     followRedirect: false # should fetch follow redirects, default=false
-    linkable: false # allows the title to be a link, default=true
+    linkable: true # allows the title to be a link, default=true
 
   - id: aile
     name: 艾了.top
-    # description: 'Built for anything connected to the Internet.'
+    description: '个人主页'
     url: 'https://www.xn--ykqv08j.top/'
     method: GET
     expectStatus: 200
@@ -35,6 +36,7 @@ monitors:
 
   - id: ypan
     name: ypan.tk
+    description: '网盘程序'
     url: 'https://ypan.tk/'
     method: GET
     expectStatus: 200
