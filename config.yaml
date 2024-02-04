@@ -5,17 +5,18 @@ settings:
   daysInHistogram: 90 # number of days you want to display in histogram
   collectResponseTimes: true # collects avg response times from CRON locations
 
-  allmonitorsOperational: 'All Systems Operational'
-  notAllmonitorsOperational: 'Not All Systems Operational'
-  monitorLabelOperational: 'Operational'
-  monitorLabelNotOperational: 'Not Operational'
-  monitorLabelNoData: 'No data'
-  dayInHistogramNoData: 'No data'
-  dayInHistogramOperational: 'All good'
-  dayInHistogramNotOperational: ' incident(s)' # xx incident(s) recorded
+  allmonitorsOperational: '所有系统正常运行'
+  notAllmonitorsOperational: '部分系统未正常运行'
+  monitorLabelOperational: '正常'
+  monitorLabelNotOperational: '不正常'
+  monitorLabelNoData: '无数据'
+  dayInHistogramNoData: '无数据'
+  dayInHistogramOperational: '一切正常'
+  dayInHistogramNotOperational: ' 个故障记录'  # xx 个故障记录
+
 
 monitors:
-  - id: workers-cloudflare-com # unique identifier
+  - id: xcheny # unique identifier
     name: www.xcheny.cn
     description: 'You write code. They handle the rest.' # default=empty
     url: 'https://www.xcheny.cn/' # URL to fetch
@@ -24,16 +25,25 @@ monitors:
     followRedirect: false # should fetch follow redirects, default=false
     linkable: false # allows the title to be a link, default=true
 
-  - id: www-cloudflare-com
-    name: 艾了
+  - id: aile
+    name: 艾了.top
     description: 'Built for anything connected to the Internet.'
     url: 'https://www.xn--ykqv08j.top/'
     method: GET
     expectStatus: 200
     linkable: true # allows the title to be a link, default=true
 
-  - id: ypan-tk
-    name: ypan
+  - id: ypan
+    name: ypan.tk
     url: 'https://ypan.tk/'
     method: GET
     expectStatus: 200
+    linkable: true # allows the title to be a link, default=true
+    
+- id: wanp
+    name: wanp.tk
+    description: '6666666'
+    url: 'https://ypan.tk/'
+    method: GET
+    expectStatus: 200
+    linkable: true # allows the title to be a link, default=true
