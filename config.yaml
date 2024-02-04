@@ -40,4 +40,10 @@ monitors:
     expectStatus: 200
     linkable: true # allows the title to be a link, default=true
     
-
+  - id: wanp
+    name: wanp.tk
+    description: '666'
+    url: 'https://wanp.tk/'
+    method: GET
+    expectStatus: 200
+    linkable: true # allows the title to be a link, default=true
