@@ -29,7 +29,6 @@ monitors:
 
   - id: aile
     name: 艾了.top
-    description: '个人主页'
     url: 'https://www.xn--ykqv08j.top/'
     method: GET
     expectStatus: 200
